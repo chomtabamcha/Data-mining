@@ -1,0 +1,13 @@
+install.packages("RWeka") 
+library(RWeka) 
+SNo <- 1:5 
+EmpName <- c('Tushar', 'Harshit', 'Sunnidhi', 'Snehashis', 'Sana') 
+EmpID <- 5:9 
+Address <- c('Calofornia', 'UP', 'haryana', 'Zoo', 'Delhi') 
+contactNo <- c(123, 234, 345, 456, 567) 
+Employee <- data.frame(SNo, EmpName, EmpID, Address, contactNo, stringsAsFactors = FALSE) 
+getwd() 
+print(Employee) 
+print(class(Employee)) 
+print(str(Employee)) 
+write.arff(Employee, file = 'Shit.arff') 
